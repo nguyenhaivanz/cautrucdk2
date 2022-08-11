@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so" placeholder="nhap kieu so">
+<select name="chon" id="chon">
+  <option value="metter" >met</option>
+  <option value="feet">feet</option>
+</select>
+<button onclick="change()">change</button>
+<input type="text" id="result"> <span id="result2"></span>
+
+<script>
+  function change() {
+    let a = parseInt(document.getElementById("so").value);
+    let chon = document.getElementById("chon").value;
+    Const = 3.2808;
+    switch (chon) {
+      case "metter":
+        result = a * Const;
+        text = "feet";
+        break;
+      case "feet":
+        result = a / Const;
+        text = "met";
+
+        break;
+
+    }
+    document.getElementById("result").value = result;
+    document.getElementById("result2").innerHTML = text;
+
+  }
+</script>
+</body>
+</html>
